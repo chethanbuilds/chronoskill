@@ -3,3 +3,5 @@ __pycache__/
 .env
 Library/
 .streamlit/secrets.toml
+.DS_Store
+.gitconfig
