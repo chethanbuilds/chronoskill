@@ -3,6 +3,10 @@
 > **State-Space Career Trajectory Engine**  
 > A production-feeling career roadmap web application crafted with Swiss editorial restraint, Indian tech market benchmarks (INR / LPA), 100% free curated learning resources, and a beginner-friendly step-by-step curriculum.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://chronoskill-ciyvxuj7hnbjaqnq5as8dy.streamlit.app/)
+
+### 🚀 **Live App: [chronoskill-ciyvxuj7hnbjaqnq5as8dy.streamlit.app](https://chronoskill-ciyvxuj7hnbjaqnq5as8dy.streamlit.app/)**
+
 ---
 
 ## 1. Overview
@@ -13,7 +17,7 @@ Rather than relying on black-box heuristics or stochastic AI hallucinations, Chr
 
 ---
 
-## 2. New Features & Updates
+## 2. Features
 
 ### 🇮🇳 Indian Rupee (INR / LPA) Compensation Benchmarks
 - Benchmark compensation is displayed in **Lakhs Per Annum (LPA)** based on 2026 Indian tech market surveys:
@@ -49,10 +53,10 @@ Rather than relying on black-box heuristics or stochastic AI hallucinations, Chr
   - **Hands-on Beginner Project**: A concrete portfolio project to build.
   - **Top Free Links**: Direct links to free courses, documentation, and videos.
 
-### 🎨 Visual Polish & Contrast Fixes
-- Fixed the dark background issue on pills: Unselected pills now have clean white backgrounds with dark text, and active pills have an atelier terracotta fill with white text.
-- Added a **Category Filter** (`All Disciplines`, `Frontend`, `Backend`, `Data & AI`, `Languages`, `DevOps`, `Cybersecurity`) to browse 55+ technical competencies easily.
-- Unified role selection cards: Cleaned up duplicate button boxes into single integrated cards.
+### 🎨 Visual Polish
+- Clean light theme: unselected pills have white backgrounds with dark text, and active pills use an atelier terracotta fill with white text.
+- **Category Filter** (`All Disciplines`, `Frontend`, `Backend`, `Data & AI`, `Languages`, `DevOps`, `Cybersecurity`) to browse 55+ technical competencies easily.
+- Unified role selection cards with a single integrated button per role.
 
 ---
 
@@ -77,28 +81,56 @@ Aiproject/
 
 ---
 
-## 4. Run Instructions
+## 4. Try It Online
 
-The app is currently active in the background on port `8503`:
+The app is deployed on **Streamlit Community Cloud** and is free to use, no installation needed:
 
-```
-URL: http://localhost:8503
-```
+**👉 https://chronoskill-ciyvxuj7hnbjaqnq5as8dy.streamlit.app/**
 
-To run or restart the application manually:
-
-```bash
-cd /Users/chethan/Documents/Aiproject
-source .venv/bin/activate
-export HOME="$(pwd)"
-streamlit run app.py --server.port 8503 --server.address 127.0.0.1 --server.headless true
-```
-
-*(Or simply `streamlit run app.py` on default port 8501).*
+> **Note:** Free-tier Streamlit apps go to sleep after a period of inactivity. If you see a "This app has gone to sleep" screen, click **"Yes, get this app back up!"** and wait a few seconds.
 
 ---
 
-## 5. Automated Tests
+## 5. Run Locally
+
+```bash
+# 1. Clone the repository
+git clone <your-repo-url>
+cd Aiproject
+
+# 2. Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Launch the app
+streamlit run app.py
+```
+
+The app opens at `http://localhost:8501` by default. To use a custom port:
+
+```bash
+streamlit run app.py --server.port 8503 --server.address 127.0.0.1
+```
+
+---
+
+## 6. Deployment
+
+ChronoSkill is deployed with **Streamlit Community Cloud**:
+
+1. Push the project to a public GitHub repository.
+2. Sign in at [share.streamlit.io](https://share.streamlit.io) with GitHub.
+3. Click **New app**, select the repository and branch, and set the main file path to `app.py`.
+4. Click **Deploy**. Streamlit installs everything in `requirements.txt` automatically.
+
+Every `git push` to the deployed branch redeploys the app automatically.
+
+---
+
+## 7. Automated Tests
 
 Run the test suite to verify all invariants:
 ```bash
